@@ -1,5 +1,6 @@
 package com.albusanesthesia.smack
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
@@ -19,8 +20,8 @@ class MainActivity : AppCompatActivity() {
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
-
     }
+
 
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
@@ -31,8 +32,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun logingBtnNavClicked(view: View) {
-
+    fun loginBtnNavClicked(view: View) {
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
     }
 
     fun addChannelClicked(view: View) {
@@ -42,4 +44,42 @@ class MainActivity : AppCompatActivity() {
     fun sendMessageBtnClicked(view: View) {
 
     }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
